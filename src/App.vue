@@ -91,9 +91,7 @@ export default {
   /* border-top: none; */
   width: 100px;
   z-index: 9999;
-  transition-property: width;
-  transition-duration: 5s;
-  transition-delay: 2s;
+  transition:transform 0.2s;
 }
 .childhead #child {
   display: block;
