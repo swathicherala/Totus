@@ -3,17 +3,27 @@
     <nav class="navbar-expand-sm fixed-top navigation">
       <div class="row">
         <div class="col-md-2">
-          <img
+           <router-link to='/'>
+                <img
             src="https://www.totus.construction/wp-content/uploads/2015/02/totus-logo.png"
-          />
+           style="padding-left: 80px;" />
+          </router-link>
+
         </div>
         <div class="col-md-10 navhead">
           <!-- <router-link to="/" class="navhead">getpage</router-link> |-->
           <router-link to="/" class="head">Home</router-link>
           <!-- <router-link :to="{ name: 'services'}" :style="{ backgroundColor: bgColor }" class="head">Services</router-link> -->
-          <router-link to="/services" class="head" id="service">Services
-          <router-link :to="{ name: 'bespoke'}" class="childhead">Bespoke Building Services</router-link>
-          <router-link :to="{ name: 'design'}" class="childhead">Design, Planning and Build</router-link>
+          <router-link to="/services" class="head" id="service"
+            >Services
+            <div class="childhead">
+              <router-link to="/bespoke" id="child"
+                >Bespoke Building Services</router-link
+              >
+              <router-link to="/design" id="child"
+                >Design, Planning and Build</router-link
+              >
+            </div>
           </router-link>
           <router-link to="/project" class="head">Projects</router-link>
           <router-link to="/about" class="head">About Us</router-link>
@@ -37,14 +47,14 @@ export default {
     FooterPage,
   },
   computed: {
-      // navBarColor() {
-      //    if (this.$route.path === "/services") { // if it is a dark route
-      //       return "#ff0000"; // basically any light color you want
-      //    }
-      //    return "#000"; // the dark color of your choice.
-      //   // return this.$route.meta.navBarColor
-      // }
-   }
+    // navBarColor() {
+    //    if (this.$route.path === "/services") { // if it is a dark route
+    //       return "#ff0000"; // basically any light color you want
+    //    }
+    //    return "#000"; // the dark color of your choice.
+    //   // return this.$route.meta.navBarColor
+    // }
+  },
   //  data() {
   //           return {
   //               bgColor: '#000'
@@ -67,33 +77,54 @@ export default {
   z-index: 100;
   position: absolute;
 }
-.childhead{
+.childhead {
   display: none;
-  /* display:block; */
-
+  background-color: white;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  left: 40%;
+  top: 90%;
+  text-align: left;
+  padding: 50px 30px 22px 22px;
+  margin-top: -10px;
+  margin-left: -50px;
+  /* border-top: none; */
+  width: 100px;
+  z-index: 9999;
+  transition-property: width;
+  transition-duration: 5s;
+  transition-delay: 2s;
 }
-#service:hover .childhead{
-   display: block;
-   color:black;
-   text-decoration: none;
-   bottom:50px;
-   position:relative;
-   top:0;
-   
+.childhead #child {
+  display: block;
+  color: grey;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 12px 12px 12px 0;
+}
+.childhead #child:hover{
+  color:black;
+}
+
+#service:hover .childhead {
+  display: block;
+  width: 220px;
 }
 .navhead {
   padding-top: 50px;
-  padding-left:80px;
+  padding-left: 80px;
 }
 .head {
   color: black;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 20px;
+  margin-left:40px;
+  padding: 0 0 47px 0;
 }
-.head:hover{
-  color:black;
-  text-decoration: underline;
+.head:hover {
+  color: black;
+  /* text-decoration: underline; */
+  border-bottom: 4px solid black;
 }
 </style>

@@ -11,7 +11,7 @@
       </p>
     </div>
 
-    <div class="" style="background-color: grey;">
+    <div class="" style="background-color: grey">
       <div class="container row intro">
         <div class="col-md-6">
           <p>
@@ -43,31 +43,35 @@
         </div>
       </div>
     </div>
- 
+
     <div class="container">
-        <div class="row description1">
-      <div class="col-md-6">
-        <h1>Ready To Go?</h1>
-        <p>
-          If you have architectural plans and are looking for professional
-          builders, find out more about the Totus Bespoke Build service.
-        </p>
-        <button type="button" class="btn btn-primary">
-           Bespoke Build
+      <div class="row description1">
+        <div class="col-md-6">
+          <h1>Ready To Go?</h1>
+          <p>
+            If you have architectural plans and are looking for professional
+            builders, find out more about the Totus Bespoke Build service.
+          </p>
+          <router-link :to="{ name: 'bespoke' }">
+            <button to="/bespoke" type="button" class="btn btn-primary">
+              Bespoke Build
             </button>
+          </router-link>
+        </div>
+        <div class="col-md-6">
+          <h1>Just Starting Out?</h1>
+          <p>
+            If you’re at the beginning of your journey and need someone to take
+            care of everything, find out more about the Totus Design, Planning &
+            Build service.
+          </p>
+          <router-link :to="{ name: 'design' }">
+            <button type="button" class="btn btn-primary">
+              Design, Planning & Build
+            </button>
+          </router-link>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h1>Just Starting Out?</h1>
-        <p>
-          If you’re at the beginning of your journey and need someone to take
-          care of everything, find out more about the Totus Design, Planning &
-          Build service.
-        </p>
-        <button type="button" class="btn btn-primary">
-          Design, Planning & Build
-        </button>
-      </div>
-    </div>
     </div>
     <!-- <div class="description2">
       <h1>Latest Projects</h1>
@@ -133,7 +137,7 @@
 
       </div>
     </div> -->
-   <WelcomeLatest/>
+    <WelcomeLatest />
     <div class="houzz">
       <h1>Best of Houzz</h1>
       <p>
@@ -141,20 +145,24 @@
         last five years!
       </p>
       <div class="container cards">
-        <img src="../assets/best-of-houzz.png" class="img-fluid" style="width:90%;margin-left:60px;">
+        <img
+          src="../assets/best-of-houzz.png"
+          class="img-fluid"
+          style="width: 90%; margin-left: 60px"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import WelcomeLatest from './WelcomeLatest.vue'
-export default{
-  name:'WelcomePage',
-  components:{
-    WelcomeLatest
-  }
-}
+import WelcomeLatest from "./WelcomeLatest.vue";
+export default {
+  name: "WelcomePage",
+  components: {
+    WelcomeLatest,
+  },
+};
 </script>
 
 <style scoped>
@@ -185,14 +193,14 @@ export default{
   margin: 80px 0 80px 0;
   text-align: left;
 }
-.description1 p{
-    color:grey;
-    font-size:25px;
-    padding:18px 0 18px 0;
+.description1 p {
+  color: grey;
+  font-size: 25px;
+  padding: 18px 0 18px 0;
 }
-.description2 p{
-  color:grey;
-    font-size:25px;  
+.description2 p {
+  color: grey;
+  font-size: 25px;
 }
 
 .list {
@@ -203,78 +211,77 @@ export default{
 
 } */
 
-.block-item{
-    float: left;
-    overflow: hidden;
-    box-sizing: border-box;
+.block-item {
+  float: left;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-.block-item a{
-    position: relative;
-    display: block;
-    height: 100%;
-    width: 100%;
-    outline: 0;
+.block-item a {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  outline: 0;
 }
-.block-item a .over{
+.block-item a .over {
   position: absolute;
   top: 24px;
-    left: 24px;
-    bottom: 50px;
-    right: 24px;
-     width: auto;
-    height: auto;
-    z-index: 2;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.7);
-    transition: all 0.2s ease-in-out 0.1s;
-    -webkit-backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
+  left: 24px;
+  bottom: 50px;
+  right: 24px;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: all 0.2s ease-in-out 0.1s;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
 }
 
-.block-item a .over h5{
-     color: #f1ebeb;
-     top:0;
-    left: 0;
-    margin-top: 55px;
-     height: 30px;
-    line-height: 30px;
-    letter-spacing: 4px;
-    width: 100%;
-    text-transform: uppercase;
-    z-index: 3;
+.block-item a .over h5 {
+  color: #f1ebeb;
+  top: 0;
+  left: 0;
+  margin-top: 55px;
+  height: 30px;
+  line-height: 30px;
+  letter-spacing: 4px;
+  width: 100%;
+  text-transform: uppercase;
+  z-index: 3;
 }
 
-.block-item a .over h5 i{
-       
-    width: 100%;
-    display: block;
-    left: 0;    
-    /* bottom: -20px; */
-    font-style: normal;
-    text-align: center;
-    font-size: 12px;
-    font-weight: 700;
-    color: #f1ebeb;
-    letter-spacing: 2px;
-    transition: all 0.3s, transform 0.4s;
-    transform: translateY(24px);
+.block-item a .over h5 i {
+  width: 100%;
+  display: block;
+  left: 0;
+  /* bottom: -20px; */
+  font-style: normal;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: #f1ebeb;
+  letter-spacing: 2px;
+  transition: all 0.3s, transform 0.4s;
+  transform: translateY(24px);
 }
 
-.block-item a img{
-    width: 100%;
-    height: 100%;
-    transition: 0.1s;
+.block-item a img {
+  width: 100%;
+  height: 100%;
+  transition: 0.1s;
 }
-.block-item a .over:hover{
- opacity: 5;
- height: 100%;
- width: 100%;
-  color:white;
+.block-item a .over:hover {
+  opacity: 5;
+  height: 100%;
+  width: 100%;
+  color: white;
   left: 0px;
-    bottom: 0px;
-    right: 0px;
-    top:0px;
+  bottom: 0px;
+  right: 0px;
+  top: 0px;
 }
 /* .block-item a h5:hover{
     opacity: 5;
@@ -289,18 +296,18 @@ export default{
   font-size: 28px;
   color: grey;
 }
-.cards{
-    display:flex;
+.cards {
+  display: flex;
 }
-.intro{
-    padding:40px 20px 40px 0;
-     color:white;
-     font-size: 23px;
-     text-align: left;
-     letter-spacing: 0.05em;
-     margin:0 71px 0 71px;
+.intro {
+  padding: 40px 20px 40px 0;
+  color: white;
+  font-size: 23px;
+  text-align: left;
+  letter-spacing: 0.05em;
+  margin: 0 71px 0 71px;
 }
-.intro img{
-    width:100%;
+.intro img {
+  width: 100%;
 }
 </style>

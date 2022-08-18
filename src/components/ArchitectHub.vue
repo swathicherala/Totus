@@ -1,8 +1,6 @@
 <template>
   <div class="main">
-    <div class="blank">
-    
-      </div>
+    <div class="blank"></div>
     <div class="architect">
       <h1>Delivering excellence in partnership with architects…</h1>
     </div>
@@ -41,7 +39,7 @@
       <div class="row">
         <div class="col-md-6">
           <h3>The Totus Team</h3>
-          <p style="margin-bottom:35px;font-size:23px">
+          <p style="margin-bottom: 35px; font-size: 23px">
             For all the work we use our large in-house team of skilled
             personnel. This ensures consistency of work and quality. We have
             in-house bricklayers, electricians, plumbers, carpenters, roofers,
@@ -59,7 +57,9 @@
           <span class="post1">NVQ level 2-5 / CSCS</span><br />
           <span class="post"> M&E </span>–
           <span class="post1">NICEIC / GasSafe / ACRIB</span>
-          <button type="button" class="btn btn-primary">Find Out More</button>
+          <router-link :to="{ name: 'contact' }">
+            <button type="button" class="btn btn-primary">Find Out More</button>
+          </router-link>
         </div>
         <div class="col-md-6">
           <img src="../assets/architect3.jpg" />
@@ -79,8 +79,8 @@
 .architect h1 {
   color: white;
 }
-.blank{
-  padding:60px;
+.blank {
+  padding: 60px;
 }
 .container img {
   width: 100%;

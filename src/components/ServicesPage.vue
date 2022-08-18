@@ -15,9 +15,11 @@
             <p>
               Bespoke Build projects range from: property renovations, extensions, basement and loft conversions, new builds as well as commercial work.
             </p>
-              <button type="button" class="btn btn-primary">
-          Bespoke Build
-        </button>
+              <router-link :to="{ name: 'bespoke' }">
+          <button to="/bespoke" type="button" class="btn btn-primary">
+           Bespoke Build
+            </button>
+</router-link>
           </div>
            <div class="col-md-6">
              <img src="../assets/service1.jpg">
@@ -36,9 +38,11 @@
             <p>
               Design, Planning & Build services include: concept and design, detailed architectural drawings, planning, building regulations, party wall agreements, build and maintenance.
             </p>
+           <router-link :to="{ name: 'design' }">
             <button type="button" class="btn btn-primary">
-          Design, Planning & Build
-        </button>
+              Design, Planning & Build
+            </button>
+          </router-link>
           </div>
           
         </div>

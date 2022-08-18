@@ -62,7 +62,7 @@
         </div>
         <div class="col-md-4 thirddiv">
           <span>
-            <i class="fa-light fa-clock-nine"></i>
+            <i class="fa-solid fa-clock-rotate-left"></i>
           </span>
           <div class="division">
                 <h5>TIME</h5>

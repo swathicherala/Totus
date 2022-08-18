@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomePage from '../components/HomePage.vue'
 import ServicesPage from '../components/ServicesPage.vue'
+import ProjectsPage from '../components/ProjectsPage.vue'
 import AboutUs from '../components/AboutUs.vue'
 import ArchitectHub from '../components/ArchitectHub.vue'
 import ContactUs from '../components/ContactUs.vue'
@@ -22,23 +23,38 @@ const routes = [
     path: '/services',
     name: 'services',
     component:ServicesPage,
-    children: [
-      {
-        path: 'bespoke',
-        name: 'bespoke',
-        component: BespokeBuilding,
-      },
-      {
-      path: 'design',
-      name: 'design',
-      component: DesignPlanning,
-    }  
-  ]
+  //   children: [
+  //     {
+  //       path: '/bespoke',
+  //       name: 'bespoke',
+  //       component: BespokeBuilding,
+  //     },
+  //     {
+  //     path: '/design',
+  //     name: 'design',
+  //     component: DesignPlanning,
+  //   }  
+  // ]
+  },
+  {
+    path: '/project',
+    name: 'project',
+    component:ProjectsPage
   },
   {
     path: '/about',
     name: 'about',
     component:AboutUs
+  },
+  {
+    path: '/bespoke',
+    name: 'bespoke',
+    component:BespokeBuilding
+  },
+  {
+    path: '/design',
+    name: 'design',
+    component:DesignPlanning
   },
   {
     path: '/architect',

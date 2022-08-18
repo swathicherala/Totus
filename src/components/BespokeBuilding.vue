@@ -1,108 +1,115 @@
 <template>
-  <div class="main">
+  <div class="main" style="background-color: #f9f9f9">
+    <div class="blank"></div>
     <div class="bespoke">
-      <h1>Outstanding quality, competitive costs, fast completion…</h1>
+      <h1>Bespoke Build</h1>
     </div>
     <div class="container">
+      <div>
+        <h1>What We Do</h1>
+        <p class="introduction">
+          If you already have your building concept, architectural drawings and
+          planning permission, you need a trustworthy building company that
+          offers great service and value to turn your plans into reality. We
+          have a vast experience of all sizes of projects and a specialist,
+          all-trades in-house team. Bespoke building services include…
+        </p>
+      </div>
       <div class="row">
-        <div class="col-md-6 choose">
-          <h3>Why Choose Totus?</h3>
+        <div class="col-md-6">
+          <img src="../assets/bespoke1.jpg" />
+        </div>
+        <div class="col-md-6 texts">
+          <h1>Complete Property Renovations</h1>
           <p>
-            Totus is a family-run company that has grown organically into a
-            large professional team of skilled tradesmen. We maintain the
-            highest quality of work by only using our own team and partnering
-            with leading London and Surrey architectural, surveyor, design and
-            engineering companies.
+            One of the best ways of creating your dream home and maximising its
+            value is to find a property and renovate it to suit your individual
+            needs. Many of our renovations involve taking the house back to its
+            shell and completely remodelling.
           </p>
+          <router-link :to="{ name: 'project' }">
+            <button type="button" class="btn btn-primary">
+              See Our Projects
+            </button>
+          </router-link>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 texts">
+          <h1>New Builds</h1>
+          <p>
+            A new build home is the perfect way to create a one-off house,
+            tailored to your specific lifestyle and requirements.
+          </p>
+          <router-link :to="{ name: 'project' }">
+            <button type="button" class="btn btn-primary">
+              See Our Projects
+            </button>
+          </router-link>
         </div>
         <div class="col-md-6">
-          <p class="choose1">
-            Most of our work comes through customer and professional referrals.
-            This is due to a combination of making sure we truly understand
-            clients’ needs, whilst providing the finest finish through attention
-            to detail and quality workmanship. Every project is personally
-            managed by our directors Andrew or Terry who collaborate with all
-            parties involved to ensure progress is being made until successful
-            and timely completion.
-          </p>
+          <img src="../assets/bespoke2.jpg" />
         </div>
       </div>
 
-      <div class="row threediv">
-        <div class="col-md-4 firstdiv">
-          <span>
-            <i class="fa-solid fa-thumbs-up"></i>
-          </span>
-          <div class="division">
-            <h5>QUALITY</h5>
-          <p>
-            We understand any building development is a huge financial
-            investment for you. That’s why we have strict quality controls in
-            place, which allows our experienced team of professionals to deliver
-            top quality results that will increase property value.
-          </p>
-          </div>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../assets/bespoke3.jpg" />
         </div>
-        <div class="col-md-4 seconddiv">
-          <span>
-            <i class="fa-solid fa-sterling-sign"></i>
-          </span>
-          <div class="division">
-            <h5>COSTS</h5>
+        <div class="col-md-6 texts">
+          <h1>House Extensions</h1>
           <p>
-            We provide clear detailed quotations that allow you to make informed
-            decisions. Our efficient resource management, build management and
-            innovative building techniques and technology enable us to pass
-            savings on to clients. And this means we are competitive on price.
+            Maximise your living space without having to move house by building
+            double or single storey, rear or front, kitchen or side return
+            extensions. Not only will this increase the footprint of your home,
+            it will add value too
           </p>
-          </div>
-        </div>
-        <div class="col-md-4 thirddiv">
-          <span>
-            <i class="fa-light fa-clock-nine"></i>
-          </span>
-          <div class="division">
-                <h5>TIME</h5>
-          <p>
-            Any building work can be stressful for busy people – especially when
-            you are juggling work and family commitments. Project continuity is
-            vital. Effective project management combined with our committed,
-            all-trades team allows us to deliver – fast!
-          </p>
-          </div>
-          
+          <router-link :to="{ name: 'project' }">
+            <button type="button" class="btn btn-primary">
+              See Our Projects
+            </button>
+          </router-link>
         </div>
       </div>
-      
-      <div class="des">
-          <div class="row des1">
-            <div class="col-md-6">
-               <p>
-                Totus is fully insured for all our work. We provide a defects and structural guarantee on all new installations. And we’ll also sort the paperwork – you’ll get full Building Control approval and other necessary completion certificates. We use only industry standard contracts, with no hidden suprises. We do make sure that you have a clarity and confidence in what you will recieve from Totus.
-               </p>
-            </div>
-            <div class="col-md-6">
-                <img src="../assets/about1.jpg">
-            </div>
-          </div>
 
-           <div class="row des2">
-            <div class="col-md-6">
-               <img src="../assets/about2.jpg">
-            </div>
-            <div class="col-md-6">
-                <h1>
-                    The Team
-                </h1>
-               <p>
-                Totus is run by brothers, Andrew and Terry, who have a joint passion for building, design and architecture. They share 20 years’ experience in the building industry, bachelor and masters degrees, construction management and trade qualifications. Over the years they have gained significant experience working for leading construction and blue chip companies.
-               </p>
-               <br>
-               <p>
-                Today Totus is stronger than ever thanks to Andrew and Terry’s vision of providing high quality workmanship combined with outstanding personal service and care.
-               </p>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-md-6 texts">
+          <h1>Basement Conversions</h1>
+          <p>
+            Join the underground revolution. The latest in basement conversions
+            are light, airy and spacious. Basement conversions are becoming
+            increasingly popular as a clever way of making the most efficient
+            use of the square footage you have.
+          </p>
+           <router-link :to="{ name: 'project' }">
+            <button type="button" class="btn btn-primary">
+              See Our Projects
+            </button>
+          </router-link>
+        </div>
+        <div class="col-md-6">
+          <img src="../assets/bespoke4.jpg" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <img src="../assets/bespoke5.jpg" />
+        </div>
+        <div class="col-md-6 texts">
+          <h1>Commercial</h1>
+          <p>
+            We have extensive experience in retail, restaurant and office
+            fit-outs – main high street brands, prestige airport lounges,
+            business centres. Please get in touch for details.
+          </p>
+           <router-link :to="{ name: 'project' }">
+            <button type="button" class="btn btn-primary">
+              See Our Projects
+            </button>
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -115,89 +122,53 @@
   padding: 80px;
   margin-bottom: 40px;
 }
-.about h1 {
+.bespoke h1 {
   color: white;
 }
-.main {
-  display: block;
+.blank {
+  padding: 60px;
 }
-.choose{
-    text-align: left;
+.container {
+  margin-top: 80px;
 }
-.choose h3{
-    padding:50px 0
+.container h1 {
+  font-size: 30px;
 }
-.choose p{
-      font-size: 25px;
-    color:grey
+.container .introduction {
+  padding: 20px 150px 120px 150px;
+  font-size: 25px;
+  color: grey;
 }
-.choose1{
-    text-align: left;
-    padding:142px 0 0 0;
-    font-size: 25px;
-    color:grey
+.row {
+  margin-bottom: 20px;
 }
-.threediv{
-    margin:180px 0;
+.row img {
+  width: 100%;
 }
-.threediv span{
-        position: relative;
-    display: inline-block;
-    width: 5em;
-    height: 5em;
-    line-height: 2em;
-    vertical-align: middle;
-        border-radius: 8em;
-  
+.row .texts {
+  margin-top: 40px;
 }
-.threediv span i{
-      color: #1f909c;
-          font-size: 2em;
-          position: absolute;
-          top:20px;
-    left: 0;
-    width: 100%;
-    text-align: center;
+.row .texts h1,
+p {
+  text-align: left;
 }
-.threediv span:hover{
-    background-color:#1f909c ;
-
-     transition: all 0.1s linear;
+.row .texts h1 {
+  padding-bottom: 20px;
 }
-.threediv span i:hover{
-    color:white
+.row .texts p {
+  font-size: 25px;
+  color: grey;
 }
-.division{
-       text-align: left;
+.btn {
+  background: #1f909c;
+  padding: 20px 15px;
+  border-radius: 0;
+  margin: 50px 0 90px 0;
+  margin-right: 380px;
 }
-.division h5{
-    margin:40px 0;
-} 
-.division p{
-    
-    color:grey
-}
-.des1{
-    margin-bottom:30px;
-}
-.des1 img{
-    width:100%
-}
-.des1 p{
-    text-align: left;
-    font-size: 26px;
-    color:grey;
-    padding-top:30px;
-}
-.des2 {
-     text-align: left;
-}
-.des2 img{
-    width:100%
-}
-.des2 p{
-    font-size: 24px;
-    color:grey;
-    padding-top:30px;
+.btn:hover {
+  border: 2px solid #1f909c;
+  background: white;
+  color: black;
 }
 </style>
