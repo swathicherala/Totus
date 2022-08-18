@@ -12,7 +12,7 @@
       <input type="radio" v-model="category" value="Commercial" class="btn"> Commercial
     </label>
      <label>
-      <input type="radio" v-model="category" value="Work-In-Progress" class="btn"> Work In Progress
+      <input type="radio" v-model="category" value="Work-In-Progress" class="btn "> Work In Progress
     </label>
   </div>
     </div>
@@ -146,7 +146,19 @@ export default{
       );
     },
     
-  }, 
+  },
+  methods(){
+    var header = document.getElementsByClassName(".category-nav");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+  }
+    
 }
 </script>
 
@@ -176,29 +188,23 @@ export default{
   margin-right: 20px;
   cursor: pointer;
 }
-.category-nav label:active{
+/* .category-nav label:active{
      background: #003bb3 !important;
         color: #fff !important;
-}
+} */
 .category-nav label:hover{
     border: 3px solid #1f909c;
   background: white;
   color: black;
 }
 .category-nav input[type="radio"] {
-  /* Hide radio buttonns */
   opacity:0;
   -webkit-appearance: none;
   appearance: none;
   position: absolute;
 }
 
-/* Image list */
 .category-list {
-  /* display: grid;
-  grid-template-columns: minmax(380px, 1fr);
-  display:flex;
-  flex-wrap: wrap;*/
   list-style: none; 
    display: flex;
   float: left;
