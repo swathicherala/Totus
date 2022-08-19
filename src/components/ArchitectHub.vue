@@ -20,10 +20,8 @@
           <img src="../assets/architect1.jpg" />
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <img src="../assets/architect2.jpg" />
-        </div>
+      <div class="row reverse">
+        
         <div class="col-md-6">
           <h3>Track Record</h3>
           <p>
@@ -34,6 +32,9 @@
             work. We provide clear, detailed competitive pricing during
             quotation and at each of the fulfilment stages.
           </p>
+        </div>
+        <div class="col-md-6">
+          <img src="../assets/architect2.jpg" />
         </div>
       </div>
       <div class="row">
@@ -57,13 +58,14 @@
           <span class="post1">NVQ level 2-5 / CSCS</span><br />
           <span class="post"> M&E </span>–
           <span class="post1">NICEIC / GasSafe / ACRIB</span>
-          <router-link :to="{ name: 'contact' }">
-            <button type="button" class="btn btn-primary">Find Out More</button>
-          </router-link>
+   
         </div>
         <div class="col-md-6">
           <img src="../assets/architect3.jpg" />
         </div>
+               <router-link :to="{ name: 'contact' }">
+            <button type="button" class="btn btn-primary">Find Out More</button>
+          </router-link>
       </div>
     </div>
   </div>
@@ -117,5 +119,15 @@
   border: 2px solid #1f909c;
   background: white;
   color: black;
+}
+.reverse{
+  display:flex;
+  flex-direction: row-reverse;
+}
+@media only screen and (max-width: 991px){
+  .row p{
+    font-size:20px;
+  }
+   
 }
 </style>

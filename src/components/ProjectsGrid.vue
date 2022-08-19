@@ -28,7 +28,7 @@
               <i> {{image.category}} </i>
             </h5>
           </div>
-                <img :src="image.src" alt="">
+                <img :src="image.src" alt="" class="img-fluid">
         </a>
       </div>
 
@@ -292,5 +292,21 @@ for (var i = 0; i < btns.length; i++) {
   bottom: 0px;
   right: 0px;
   top: 0px;
+}
+@media only screen and (max-width: 572px) {
+    /* html {
+        font-size: 80%;
+    } */
+   .block-item img{
+    width:100%;
+   }
+}
+@media only screen and (max-width: 991px){
+ 
+   
+}
+@media only screen and (max-width: 1200px){
+ 
+   
 }
 </style>

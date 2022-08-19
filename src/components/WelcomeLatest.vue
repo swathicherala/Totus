@@ -5,8 +5,8 @@
         Interested? Take a look at some of our favourite projects and get a
         flavour of our work…
       </p>
-      <div class="list">
-        <div class="block-item">
+      <div class="row m-0 list">
+        <div class="col-md-3 col-lg-6 p-0 block-item">
             <a href="https://www.totus.construction/projects/carlton-gardens-ealing/">
             <div class="over">
             <h5>
@@ -16,11 +16,11 @@
             </i>
             </h5>
            </div>
-        <img src="../assets/list.jpg"/>
+        <img src="../assets/list.jpg" class="img-fluid"/>
         </a>
         </div>
         
-        <div class="block-item">
+        <div class="col-md-3 col-lg-6 p-0 block-item">
             <a href="https://www.totus.construction/projects/westgrove-walton-kt12-2-2/">
             <div class="over">
             <h5>
@@ -30,11 +30,11 @@
             </i>
             </h5>
            </div>
-        <img src="../assets/list2.jpg"/>
+        <img src="../assets/list2.jpg" class="img-fluid"/>
         </a>
         </div>
          
-         <div class="block-item">
+         <div class="col-md-3 col-lg-6 p-0 block-item">
             <a href="https://www.totus.construction/projects/clydesdalegardens/">
             <div class="over">
             <h5>
@@ -44,10 +44,10 @@
             </i>
             </h5>
            </div>
-           <img src="../assets/list3.jpg"/>
+           <img src="../assets/list3.jpg" class="img-fluid"/>
         </a>
         </div>
-         <div class="block-item">
+         <div class="col-md-3 col-lg-6 p-0 block-item">
             <a href="https://www.totus.construction/projects/flats-south-norwood/">
             <div class="over">
             <h5>
@@ -57,7 +57,7 @@
             </i>
             </h5>
            </div>
-        <img src="../assets/list4.png"/>
+        <img src="../assets/list4.png" class="img-fluid"/>
         </a>
         </div>
 
@@ -140,7 +140,7 @@
 }
 
 .block-item a img{
-    width: 400px;
+    width: 100%;
     height: 100%;
     transition: 0.1s;
 }
@@ -153,5 +153,22 @@
     bottom: 0px;
     right: 0px;
     top:0px;
+}
+@media only screen and (max-width: 572px) {
+    /* html {
+        font-size: 80%;
+    } */
+   .list{
+      display:block
+    }
+     
+}
+@media only screen and (max-width: 991px){
+
+   
+    .list{
+      display:block
+    }
+    
 }
 </style>

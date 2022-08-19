@@ -6,16 +6,16 @@
     </div>
 
     <div class="container">
-      <p>
+      <p class="projpara">
         We pride ourselves on providing a personal, professional service. Take a
         look at some of our favourite building projects and get a flavour of our
         work…
       </p>
     </div>
     <ProjectsGrid />
-    <div clas="container" style="margin-top: 20px">
+    <div clas="container" style="margin-top:20px">
       <h1>Find Out How We Can Help You</h1>
-      <p style="padding: 20px 105px 20px 105px; font-size: 30px; color: grey">
+      <p class="paras" style="padding: 20px 105px 20px 105px; font-size: 30px; color: grey">
         If you are right at the start of your building project, or already have
         plans and are raring to go – we can help!
       </p>
@@ -67,5 +67,21 @@ export default {
   border: 2px solid #1f909c;
   background: white;
   color: black;
+}
+@media only screen and (max-width: 572px) {
+    /* html {
+        font-size: 80%;
+    } */
+   .container .projpara{
+          padding: 10px;
+    font-size: 18px;
+    }
+    .paras{
+      font-size:0px;
+    }
+}
+@media only screen and (max-width: 991px){
+ 
+   
 }
 </style>

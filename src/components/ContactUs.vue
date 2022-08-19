@@ -159,4 +159,15 @@ pre span {
 .form-group .form-control{
 width: 76%;
 }
+@media only screen and (max-width: 572px) {
+    /* html {
+        font-size: 80%;
+    } */
+}
+@media only screen and (max-width: 991px){
+   .row .btn{
+        margin-bottom: 20px;
+   }
+   
+}
 </style>

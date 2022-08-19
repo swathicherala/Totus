@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="car">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators move">
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -37,10 +37,16 @@
 </script>
 
 <style scoped>
+/* .car{
+
+    position: absolute;
+    top: 0;
+
+} */
 .para{ 
   position: absolute;
   text-align: center;
-  top: 40%;
+  top: 39%;
   width: 100%;
   font-size:80px;
   font-weight: bold;
@@ -52,10 +58,28 @@
     width:100%;
   
 }
-.carousel img{
+/* .carousel img{
   height:20%;
-}
+} */
 .imageslider img{
   height:100%;
+}
+@media only screen and (max-width: 320px){
+   .para{
+    font-size: 23px;
+   }
+}
+@media only screen and (max-width: 572px) {
+    /* html {
+        font-size: 80%;
+    } */
+    /* .para{
+      font-size:35px;
+    } */
+}
+@media only screen and (max-width: 991px){
+ .para{
+      font-size:35px;
+    }
 }
 </style>

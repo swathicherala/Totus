@@ -40,9 +40,9 @@
               Preface Studios</span>
             </p>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6 rightside">
             <p style="text-align:left;color:grey">All our projects are certified by:</p>
-            <div class="images">
+            <div class="images owl-carousel owl-theme">
                 <img src="../assets/footer1.jpg">
                 <img src="../assets/footer2.png">
                 <img src="../assets/footer3.png">
@@ -55,6 +55,10 @@
     </footer>
   </div>
 </template>
+
+<script>
+
+</script>
 
 <style scoped>
 /* .foot{
@@ -77,5 +81,32 @@
 }
 .images img{
         width:20%
+}
+@media only screen and (max-width: 576px) {
+    /* html {
+        font-size: 80%;
+    } */
+ 
+}
+@media only screen and (max-width: 991px){
+     .leftside{
+       padding-top: 50px;
+      
+    }
+    .rightside{
+      margin-top: 58px;
+    }
+    .row{
+ padding-left:40px;
+    }
+}
+@media only screen and (max-width: 1400px){
+     .leftside{
+       padding-top: 50px;
+      
+    }
+    .row{
+ padding-left:40px;
+    }
 }
 </style>

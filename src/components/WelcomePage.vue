@@ -27,11 +27,8 @@
           <img src="../assets/vehicle.jpg" class="img-fluid" />
         </div>
       </div>
-      <div class="container row intro">
-        <div class="col-md-6">
-          <img src="../assets/vehicle2.jpg" class="img-fluid" />
-        </div>
-        <div class="col-md-6">
+      <div class="container row intro reverse">
+          <div class="col-md-6">
           <p>
             When it comes to any building project, there is a wealth of
             information available and the options can be overwhelming. Whether
@@ -41,14 +38,18 @@
             every step of the journey.
           </p>
         </div>
+        <div class="col-md-6">
+          <img src="../assets/vehicle2.jpg" class="img-fluid" />
+        </div>
+      
       </div>
     </div>
 
     <div class="container">
       <div class="row description1">
         <div class="col-md-6">
-          <h1>Ready To Go?</h1>
-          <p>
+          <h1 class="ready">Ready To Go?</h1>
+          <p class="paragraph">
             If you have architectural plans and are looking for professional
             builders, find out more about the Totus Bespoke Build service.
           </p>
@@ -59,8 +60,8 @@
           </router-link>
         </div>
         <div class="col-md-6">
-          <h1>Just Starting Out?</h1>
-          <p>
+          <h1 class="start" style="">Just Starting Out?</h1>
+          <p class="start1">
             If you’re at the beginning of your journey and need someone to take
             care of everything, find out more about the Totus Design, Planning &
             Build service.
@@ -73,14 +74,18 @@
         </div>
       </div>
     </div>
-    <!-- <div class="description2">
+
+
+
+    <!-- hhh -->
+    <div class="description2">
       <h1>Latest Projects</h1>
       <p>
         Interested? Take a look at some of our favourite projects and get a
         flavour of our work…
       </p>
-      <div class="list">
-        <div class="block-item">
+      <div class="row m-0 list">
+        <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-6 col-12 p-0 block-item">
             <a href="https://www.totus.construction/projects/carlton-gardens-ealing/">
             <div class="over">
             <h5>
@@ -90,11 +95,11 @@
             </i>
             </h5>
            </div>
-        <img src="../assets/list.jpg"/>
+        <img src="../assets/list.jpg" class="img-fluid"/>
         </a>
         </div>
         
-        <div class="block-item">
+        <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-6 col-12 p-0 block-item">
             <a href="https://www.totus.construction/projects/westgrove-walton-kt12-2-2/">
             <div class="over">
             <h5>
@@ -104,11 +109,11 @@
             </i>
             </h5>
            </div>
-        <img src="../assets/list2.jpg"/>
+        <img src="../assets/list2.jpg" class="img-fluid"/>
         </a>
         </div>
          
-         <div class="block-item">
+         <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-6 col-12 p-0 block-item">
             <a href="https://www.totus.construction/projects/clydesdalegardens/">
             <div class="over">
             <h5>
@@ -118,10 +123,10 @@
             </i>
             </h5>
            </div>
-           <img src="../assets/list3.jpg"/>
+           <img src="../assets/list3.jpg" class="img-fluid"/>
         </a>
         </div>
-         <div class="block-item">
+         <div class="col-xl-3 col-xxl-3 col-lg-3 col-md-6 col-sm-6 col-12 p-0 block-item">
             <a href="https://www.totus.construction/projects/flats-south-norwood/">
             <div class="over">
             <h5>
@@ -131,13 +136,18 @@
             </i>
             </h5>
            </div>
-        <img src="../assets/list4.png"/>
+        <img src="../assets/list4.png" class="img-fluid"/>
         </a>
         </div>
 
       </div>
-    </div> -->
-    <WelcomeLatest />
+    </div>
+    <!-- hhh -->
+   
+   
+   
+    <!-- <WelcomeLatest /> -->
+    <br>
     <div class="houzz">
       <h1>Best of Houzz</h1>
       <p>
@@ -148,7 +158,7 @@
         <img
           src="../assets/best-of-houzz.png"
           class="img-fluid"
-          style="width: 90%; margin-left: 60px"
+          style="width: 90%; margin: auto"
         />
       </div>
     </div>
@@ -156,11 +166,11 @@
 </template>
 
 <script>
-import WelcomeLatest from "./WelcomeLatest.vue";
+// // import WelcomeLatest from "./WelcomeLatest.vue";
 export default {
   name: "WelcomePage",
   components: {
-    WelcomeLatest,
+    // WelcomeLatest,
   },
 };
 </script>
@@ -172,14 +182,14 @@ export default {
 .info h1 {
   font-size: 30px;
 }
-.description {
+.description{
   padding: 15px 250px 60px 250px;
   font-size: 28px;
   color: grey;
 }
 .btn {
   background: #1f909c;
-  padding: 20px 30px;
+  padding: 11px 20px;
   border-radius: 0;
   margin-top: 20px;
   margin-right: 150px;
@@ -210,7 +220,10 @@ export default {
   transform: scale(1.1);
 
 } */
-
+.reverse{
+  display:flex;
+  flex-direction: row-reverse;
+}
 .block-item {
   float: left;
   overflow: hidden;
@@ -300,14 +313,96 @@ export default {
   display: flex;
 }
 .intro {
-  padding: 40px 20px 40px 0;
+  padding: 40px 0px 40px 0;
   color: white;
   font-size: 23px;
   text-align: left;
   letter-spacing: 0.05em;
-  margin: 0 71px 0 71px;
+  margin: 0 auto;
 }
 .intro img {
   width: 100%;
+}
+@media only screen and (max-width: 320px) {
+   .info{
+    margin-top:30px;
+   }
+   .description{
+        padding: 12px 22px 10px;
+   }
+   .intro p{
+    text-align:center;
+   }
+   .intro img{
+    margin:0 auto
+   }
+   .description1 .ready{
+        padding: 0;
+    text-align: left;
+   }
+   .description1 .paragraph{
+        font-size: 18px;
+   }
+   .description1 .btn{
+    /* margin-top: -10px;
+    padding:14px 8px; */
+        margin: 0px;
+    padding: 12px;
+    font-size: 15px;
+    width: 100%;
+   }
+   .description1 .start{
+    margin-top: 50px;
+    text-align: center;
+    padding: 0;
+    font-size: 25px !important;
+   }
+   .description1 p{
+    margin-top: 30px;
+    padding: 0;
+    font-size: 16px !important;
+   }
+   .start1{
+        text-align: center;
+    font-size: 20px;
+   }
+
+}
+
+@media only screen and (max-width: 572px) {
+    /* html {
+        font-size: 80%;
+    } */
+    .description{
+      padding:30px;
+      text-align: center;
+      font-size:20px;
+    }
+     .btn{
+      margin-bottom:20px;
+    }
+    .houzz h1{
+       padding-top:40px;
+    }
+    .houzz p{
+      font-size:18px;
+    }
+    .houzz img{
+      margin:0 auto;
+    }
+}
+@media only screen and (max-width: 991px){
+   .info h1{
+    /* padding:0 30px */
+   }
+   .description{
+      /* padding:40px 100px 40px 100px; */
+      text-align: center;
+      font-size:18px;
+    }
+    .intro p{
+      font-size:15px;
+    }
+   
 }
 </style>
