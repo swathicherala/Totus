@@ -16,8 +16,10 @@
     </label>
   </div>
     </div>
-   <transition-group appear tag="ul" class="category-list">
-    <li v-for="image in filterByCategory" :key="image.index">
+   <div class="row no-gutter ">
+    <div class="col-lg-4 col-md-6 col-sm-12 category-list" v-for="image in filterByCategory" :key="image.index">
+      <!-- <transition-group appear tag="ul" class="category-list"> -->
+    <div>
         <div class="block-item">
         <a
           href="https://www.totus.construction/projects/carlton-gardens-ealing/"
@@ -32,8 +34,10 @@
         </a>
       </div>
 
-    </li>
-  </transition-group>
+    </div>
+  <!-- </transition-group> -->
+    </div>
+   </div>
   </div>
 </template>
 
@@ -162,36 +166,19 @@ for (var i = 0; i < btns.length; i++) {
 }
 </script>
 
-<style scoped>
-/* .btn {
-  background: #1f909c;
-  padding: 20px 30px;
-  border-radius: 0;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-.btn:hover {
-  border: 2px solid #1f909c;
-  background: white;
-  color: black;
-} */
+<style>
 .category-nav {
   text-align: center;
   padding: 30px;
 }
-
 .category-nav label {
-  background: #0bd;
+  background: rgb(31, 144, 156);
   color: #fff;
   padding: 20px 30px;
   margin-top: 20px;
   margin-right: 20px;
   cursor: pointer;
 }
-/* .category-nav label:active{
-     background: #003bb3 !important;
-        color: #fff !important;
-} */
 .category-nav label:hover{
     border: 3px solid #1f909c;
   background: white;
@@ -203,34 +190,25 @@ for (var i = 0; i < btns.length; i++) {
   appearance: none;
   position: absolute;
 }
-
 .category-list {
-  list-style: none; 
-   display: flex;
-  float: left;
   box-sizing: border-box;
-  flex-wrap: wrap;
   margin-top: 20px;
-  position: relative;
-  z-index: 100;
-  width: 100%;
+  z-index: 98;
   overflow: hidden;
 }
-.category-list .block-item img {
+/* .category-list .block-item img {
   width: 410px;
   height: 100%;
   object-fit: cover;
   transition: 0.1s;
   background-size: cover;
   background-position: center center;
-}
-
+} */
 .block-item {
   float: left;
   overflow: hidden;
   box-sizing: border-box;
 }
-
 .block-item a {
   position: relative;
   display: block;
@@ -253,7 +231,6 @@ for (var i = 0; i < btns.length; i++) {
   -webkit-backface-visibility: hidden;
   -webkit-transform: translateZ(0);
 }
-
 .block-item a .over h5 {
   color: #f1ebeb;
   top: 0;
@@ -266,7 +243,6 @@ for (var i = 0; i < btns.length; i++) {
   text-transform: uppercase;
   z-index: 3;
 }
-
 .block-item a .over h5 i {
   width: 100%;
   display: block;
@@ -281,8 +257,6 @@ for (var i = 0; i < btns.length; i++) {
   transition: all 0.3s, transform 0.4s;
   transform: translateY(24px);
 }
-
-
 .block-item a .over:hover {
   opacity: 5;
   height: 100%;
@@ -293,6 +267,16 @@ for (var i = 0; i < btns.length; i++) {
   right: 0px;
   top: 0px;
 }
+.row.no-gutter {
+margin-left: 0;
+margin-right: 0;
+}
+
+.row.no-gutter > div[class*="col-"] {
+padding-left: 0;
+padding-right: 0;
+}
+
 @media only screen and (max-width: 572px) {
     /* html {
         font-size: 80%;
@@ -301,12 +285,21 @@ for (var i = 0; i < btns.length; i++) {
     width:100%;
    }
 }
-@media only screen and (max-width: 991px){
- 
-   
+@media only screen and (max-width: 425px){
+ .category-list{
+      padding: 0;
+ }
+ .category-nav{
+      display: flex;
+    flex-direction: column;
+        padding: 0 5px 12px 30px;
+ }
 }
-@media only screen and (max-width: 1200px){
- 
+@media only screen and (max-width: 768px){
+ .category-list li .block-item img{
+      padding: 0;
+      width:706px;
+ }
    
 }
 </style>

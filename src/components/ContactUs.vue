@@ -105,7 +105,7 @@ Surrey, KT12 2SD
 .contact {
   background-color: #7a8e8d;
   text-align: left;
-  padding: 80px;
+  padding: 40px;
   margin-bottom: 40px;
 }
 .contact h1 {

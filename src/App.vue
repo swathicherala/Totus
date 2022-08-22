@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <div id="font-imp">
-      <nav class="navbar navbar-expand-lg navigation">
-        <div class="container">
-          <div class="myclass">
+      <nav class="navbar navbar-expand-lg navigation" id="navbar" style="padding:0">
+        <div class="container" style="padding:0">
+          <div class="myclass" style="background-color:grey">
             <!-- ACE Logo start -->
             <a href="#top" class="navbar-brand linkss" to="/">
               <img
@@ -45,12 +45,12 @@
                
                   <ul class="childhead">
                     <li class="nav-item space" id="child">
-                  <router-link class="list" aria-current="page" to="/about" id="child"
+                  <router-link class="list" aria-current="page" to="/bespoke" id="child"
                     >Bespoke Building Services</router-link
                   >
                 </li>
                 <li class="nav-item space" id="child">
-                  <router-link class="list" aria-current="page" id="child" to="/contact" 
+                  <router-link class="list" aria-current="page" id="child" to="/design" 
                     >Design, Planning and Build</router-link
                   >
                 </li>
@@ -101,20 +101,33 @@ export default {
   components: {
     FooterPage
   },
-  computed: {
-    // navBarColor() {
-    //    if (this.$route.path === "/services") { // if it is a dark route
-    //       return "#ff0000"; // basically any light color you want
-    //    }
-    //    return "#000"; // the dark color of your choice.
-    //   // return this.$route.meta.navBarColor
-    // }
+  data () {
+    return {
+      scrollValue:'',
+       myStyle:{
+            backgroundColor:"#16a085" 
+            }
+    }
   },
-  //  data() {
-  //           return {
-  //               bgColor: '#000'
-  //           }
-  //       }
+mounted(){
+  // this.changeBag()
+  window.addEventListener('scroll',this.changeBag)
+},
+methods:{
+   changeBag(){
+    var navbar=document.getElementById('navbar')
+    var scrollvalue=window.scrollY
+    this.scrollValue=scrollvalue
+    console.log(scrollvalue)
+    if(scrollvalue < 150){
+      navbar.classList.remove('bgcolor')
+    }else{
+      navbar.classList.add('bgcolor')
+    }
+  }
+
+},
+       
 };
 </script>
 
@@ -126,25 +139,40 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+body {
+  height:300vh;
+  background:    
+    linear-gradient(#fff,#fff) 0 100px/100% 100% no-repeat navbar,
+    linear-gradient(to bottom, blue 300px, red 0) center/100% 100%;
+}
 .navigation {
   background: transparent;
   color: black;
   z-index: 100;
   position: absolute;
 }
+.bgcolor{
+  background: white;
+  color:black;
+  transition:all 1s;
+}
+.navbarbtn{
+  background: white;
+}
+
 .childhead {
   display: none;
   background-color: white;
   position: absolute;
   transition: all 0.2s ease-in-out;
-  left: 38%;
+  left: 45%;
   top: 80%;
   text-align: left;
   /* padding: 20px 30px 22px 22px; */
   margin-top: -10px;
   padding-left: -50px;
   /* border-top: none; */
-  width: 100px;
+  width: 100%;
   z-index: 9999;
   transition: transform 0.2s;
 }
@@ -153,8 +181,9 @@ export default {
   color: grey;
   text-decoration: none;
   font-size: 12px;
-  padding: 15px;
+  padding: 10px 0 5px 5px;
 }
+
 .childhead #child:hover {
   color: black;
 }
@@ -170,8 +199,8 @@ export default {
   background: transparent;
   z-index: 100;
   position: fixed;
-   padding-top: 50px;
-  padding-left: 80px;
+   padding-top: 72px;
+  /* padding-left: 80px; */
 }
 .myul {
  padding-top: 10px;
@@ -188,14 +217,7 @@ export default {
  text-transform: uppercase;
   text-decoration: none;
 }
-.list{
-  /* font-size:10px !important; */
-  }
-/* .head {
-  color: black;
-  font-weight: bold;
-  padding: 0 0 47px 0;
-} */
+
 .head:hover {
   color: black;
   /* text-decoration: underline; */
@@ -218,16 +240,40 @@ nav {
 }
 nav a {
   font-weight: bold;
-  color: grey;
+  color: black;
 }
 nav a.router-link-exact-active {
   color: black;
   border: none;
 }
-@media only screen and (max-width: 320px) {
+
+@media only screen and (max-width: 425px) {
    .logo-svg{
     width:100px;
    }  
+}
+@media only screen and (max-width: 580px) {
+    /* html {
+        font-size: 80%;
+    } */
+    .navbar-brand{
+    padding-left:20px;
+   }
+   .data{
+    padding-right:20px;
+   }
+    .childhead{
+    left:25%;
+    top:55%;
+  }
+   
+}
+
+@media only screen and (max-width:768px){
+   .childhead{
+    left:15%;
+    top:55%;
+  }
 }
 @media only screen and (max-width: 991px) {
     html {
@@ -245,11 +291,17 @@ nav a.router-link-exact-active {
     .navbar-change {
         transition: 0.9s ease-in linear !important;
         /* padding-left: 20px; */
-        padding-top: 25px !important;
+        /* padding-top: 25px !important; */
          background: black;
+         /* padding:20px; */
          width:100%;
          text-align:center;
     }
+
+    .navbar-change .nav-item .list{
+      padding-bottom:20px;
+    }
+    
    .navbar-brand{
     padding-left:20px;
    }
@@ -261,23 +313,15 @@ nav a.router-link-exact-active {
     color:white
   }
   .myul .space a{
-    padding:10px;
     color:white;
   }
 }
-@media only screen and (max-width: 580px) {
-    /* html {
-        font-size: 80%;
-    } */
-    .navbar-brand{
-    padding-left:20px;
-   }
-   .data{
-    padding-right:20px;
-   }
-   
-}
+
 @media only screen and (max-width: 1200px){
+  .list{
+    padding:10px
+  }
+ 
 }
 /* .navigation{
   background: white;

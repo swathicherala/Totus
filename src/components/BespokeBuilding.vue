@@ -1,12 +1,12 @@
 <template>
-  <div class="main" style="background-color: #f9f9f9">
+  <div class="main1" style="">
     <div class="blank"></div>
     <div class="bespoke">
       <h1>Bespoke Build</h1>
     </div>
     <div class="container">
-      <div>
-        <h1>What We Do</h1>
+      <div class="question">
+        <h1 class="questionhead">What We Do</h1>
         <p class="introduction">
           If you already have your building concept, architectural drawings and
           planning permission, you need a trustworthy building company that
@@ -15,9 +15,10 @@
           all-trades in-house team. Bespoke building services include…
         </p>
       </div>
-      <div class="row">
+
+       <div class="row">
         <div class="col-md-6">
-          <img src="../assets/bespoke1.jpg" />
+          <img src="../assets/bespoke1.jpg" class="img-fluid"/>
         </div>
         <div class="col-md-6 texts">
           <h1>Complete Property Renovations</h1>
@@ -35,7 +36,10 @@
         </div>
       </div>
 
-      <div class="row">
+      <div class="row reverse">
+         <div class="col-md-6">
+          <img src="../assets/bespoke2.jpg" class="img-fluid"/>
+        </div>
         <div class="col-md-6 texts">
           <h1>New Builds</h1>
           <p>
@@ -48,14 +52,12 @@
             </button>
           </router-link>
         </div>
-        <div class="col-md-6">
-          <img src="../assets/bespoke2.jpg" />
-        </div>
+       
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <img src="../assets/bespoke3.jpg" />
+          <img src="../assets/bespoke3.jpg" class="img-fluid"/>
         </div>
         <div class="col-md-6 texts">
           <h1>House Extensions</h1>
@@ -73,7 +75,11 @@
         </div>
       </div>
 
-      <div class="row">
+
+     <div class="row reverse">
+         <div class="col-md-6">
+          <img src="../assets/bespoke4.jpg" class="img-fluid"/>
+        </div>
         <div class="col-md-6 texts">
           <h1>Basement Conversions</h1>
           <p>
@@ -88,14 +94,12 @@
             </button>
           </router-link>
         </div>
-        <div class="col-md-6">
-          <img src="../assets/bespoke4.jpg" />
-        </div>
+     
       </div>
 
       <div class="row">
         <div class="col-md-6">
-          <img src="../assets/bespoke5.jpg" />
+          <img src="../assets/bespoke5.jpg" class="img-fluid"/>
         </div>
         <div class="col-md-6 texts">
           <h1>Commercial</h1>
@@ -119,7 +123,7 @@
 .bespoke {
   background-color: #be7757;
   text-align: left;
-  padding: 80px;
+  padding: 40px;
   margin-bottom: 40px;
 }
 .bespoke h1 {
@@ -163,12 +167,41 @@ p {
   background: #1f909c;
   padding: 20px 15px;
   border-radius: 0;
-  margin: 50px 0 90px 0;
-  margin-right: 380px;
+  margin: 20px 161px 90px 0;
+  /* text-align: left; */
+  /* margin-right: 380px; */
 }
 .btn:hover {
   border: 2px solid #1f909c;
   background: white;
   color: black;
 }
+.reverse{
+  display:flex;
+  flex-direction: row-reverse;
+}
+@media only screen and (max-width: 320px) {
+  
+ .btn{
+         margin-bottom: 35px;
+    padding: 12px;
+    font-size: 15px;
+    width: 50%;
+   
+ }
+}
+@media only screen and (max-width: 1440px) {
+  
+ .questionhead{
+  font-size: 20px;
+ }
+  .container .introduction{
+       padding: 0px 0px 120px 0px;
+    font-size: 20px;
+    text-align: center;
+  } 
+   
+
+}
+
 </style>

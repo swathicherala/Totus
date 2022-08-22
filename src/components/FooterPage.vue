@@ -90,7 +90,7 @@
 }
 @media only screen and (max-width: 991px){
      .leftside{
-       padding-top: 50px;
+       padding-top: 20px;
       
     }
     .rightside{
@@ -101,12 +101,12 @@
     }
 }
 @media only screen and (max-width: 1400px){
-     .leftside{
+     /* .leftside{
        padding-top: 50px;
       
     }
     .row{
  padding-left:40px;
-    }
+    } */
 }
 </style>

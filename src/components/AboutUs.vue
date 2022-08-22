@@ -80,7 +80,7 @@
       <div class="des">
           <div class="row des1">
             <div class="col-md-6">
-               <p>
+               <p class="full">
                 Totus is fully insured for all our work. We provide a defects and structural guarantee on all new installations. And we’ll also sort the paperwork – you’ll get full Building Control approval and other necessary completion certificates. We use only industry standard contracts, with no hidden suprises. We do make sure that you have a clarity and confidence in what you will recieve from Totus.
                </p>
             </div>
@@ -89,22 +89,23 @@
             </div>
           </div>
 
-           <div class="row des2">
-            <div class="col-md-6">
-               <img src="../assets/about2.jpg">
-            </div>
-            <div class="col-md-6">
-                <h1>
+           <div class="row des2 reverse">
+             <div class="col-md-6 teams">
+                <h1 class="team">
                     The Team
                 </h1>
                <p>
                 Totus is run by brothers, Andrew and Terry, who have a joint passion for building, design and architecture. They share 20 years’ experience in the building industry, bachelor and masters degrees, construction management and trade qualifications. Over the years they have gained significant experience working for leading construction and blue chip companies.
                </p>
-               <br>
+               <!-- <br> -->
                <p>
                 Today Totus is stronger than ever thanks to Andrew and Terry’s vision of providing high quality workmanship combined with outstanding personal service and care.
                </p>
             </div>
+            <div class="col-md-6">
+               <img src="../assets/about2.jpg">
+            </div>
+           
           </div>
       </div>
     </div>
@@ -115,7 +116,7 @@
 .about {
   background-color: #7a8e8d;
   text-align: left;
-  padding: 80px;
+  padding: 40px;
   margin-bottom: 40px;
 }
 .about h1 {
@@ -144,7 +145,7 @@
     color:grey
 }
 .threediv{
-    margin:180px 0;
+    margin:120px 0;
 }
 .threediv span{
         position: relative;
@@ -205,5 +206,33 @@
     font-size: 24px;
     color:grey;
     padding-top:30px;
+}
+.reverse{
+  display:flex;
+  flex-direction: row-reverse;
+}
+/* .team{
+margin-top:-10px;
+} */
+@media only screen and (max-width: 425px) {
+.team{
+     width: 100%;
+    margin-top: 26%;
+  }  
+  .seconddiv{
+    padding-top: 20%;
+  } 
+  .thirddiv{
+        padding-top: 20%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .des1 .full{
+        font-size: 20px;
+  }
+  .teams p{
+        font-size: 18px;
+  }
+  
 }
 </style>

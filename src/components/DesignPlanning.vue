@@ -34,14 +34,18 @@
        </div>
     </div>
 
-    <div class="row">
+    <div class="row reverse">
+        <div class="col-md-6">
+        <img src="../assets/design2.jpg"/>
+       </div>
+       
       <div class="col-md-6 texts">
          <h1>
-           Local Authority’s Planning Permission
+           Detailed Architectural and Structural Drawings
 
          </h1>
          <p>
-  The Totus team is at hand to submit detailed plans and ensure the legal process for property development is adhered to.
+The architect and client relationship is fundamental to a project’s success. Our architects know how to balance an exciting vision with practical strategies and legal implications.
          </p>
           <router-link :to="{ name: 'project' }">
             <button type="button" class="btn btn-primary">
@@ -49,10 +53,7 @@
             </button>
           </router-link>
        </div>
-       <div class="col-md-6">
-        <img src="../assets/design2.jpg"/>
-       </div>
-       
+     
     </div>
     
      <div class="row">
@@ -61,11 +62,12 @@
        </div>
       <div class="col-md-6 texts">
          <h1>
-           Party Wall Agreements
-
+          Local Authority’s Planning Permission
          </h1>
          <p>
-          We make sure your closest neighbours are happy with the work you propose. Our experienced surveyors will take care of all the necessary party wall notices.
+     The Totus team is at hand to submit detailed plans and ensure the legal process for property development is adhered to.
+
+
          </p>
           <router-link :to="{ name: 'project' }">
             <button type="button" class="btn btn-primary">
@@ -77,14 +79,18 @@
        
     </div>
 
-     <div class="row">
+     <div class="row reverse">
+      <div class="col-md-6">
+        <img src="../assets/design4.jpg"/>
+       </div>
       <div class="col-md-6 texts">
          <h1>
-           Build
-
+          Party Wall Agreements
          </h1>
          <p>
-            And now our large team of skilled builders will turn your plans into reality.
+           We make sure your closest neighbours are happy with the work you propose. Our experienced surveyors will take care of all the necessary party wall notices.
+
+
          </p>
          <router-link :to="{ name: 'project' }">
             <button type="button" class="btn btn-primary">
@@ -92,9 +98,7 @@
             </button>
           </router-link>
        </div>
-       <div class="col-md-6">
-        <img src="../assets/design4.jpg"/>
-       </div>
+       
        
     </div>
 
@@ -104,10 +108,10 @@
        </div>
       <div class="col-md-6 texts">
          <h1>
-           Commercial
+           Build
          </h1>
          <p>
-           We have extensive experience in retail, restaurant and office fit-outs – main high street brands, prestige airport lounges, business centres. Please get in touch for details.
+          And now our large team of skilled builders will turn your plans into reality.
          </p>
          <router-link :to="{ name: 'project' }">
             <button type="button" class="btn btn-primary">
@@ -127,7 +131,7 @@
 .design {
   background-color: #80b692;
   text-align: left;
-  padding: 80px;
+  padding: 40px;
   margin-bottom: 40px;
 }
 .design h1 {
@@ -170,12 +174,41 @@ color:grey;
   background: #1f909c;
   border-radius: 0;
   padding: 20px 15px;
-  margin: 50px 0 90px 0;
-  margin-right: 380px;
+  margin: 50px 161px 90px 0;
+  /* margin-right: 380px; */
 }
 .btn:hover {
   border: 2px solid #1f909c;
   background: white;
   color: black;
+}
+.reverse{
+  display:flex;
+  flex-direction: row-reverse;
+}
+@media only screen and (max-width: 320px) {
+  
+ .btn{
+         margin-bottom: 55px;
+    padding: 12px;
+    font-size: 15px;
+    width: 50%;
+   
+ }
+}
+@media only screen and (max-width: 1440px) {
+  .row img{
+    padding-bottom: 40px;
+  }
+ .questionhead{
+  font-size: 20px;
+ }
+  .container .introduction{
+       padding: 0px 0px 120px 0px;
+    font-size: 20px;
+    text-align: center;
+  } 
+   
+
 }
 </style>

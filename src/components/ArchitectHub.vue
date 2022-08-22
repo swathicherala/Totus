@@ -75,7 +75,7 @@
 .architect {
   background-color: #7a8e8d;
   text-align: left;
-  padding: 80px;
+  padding: 40px;
   margin-bottom: 40px;
 }
 .architect h1 {
@@ -91,7 +91,7 @@
   text-align: left;
 }
 .container h3 {
-  padding-top: 40px;
+  padding-top: 20px;
 }
 .container p {
   color: grey;
@@ -124,10 +124,23 @@
   display:flex;
   flex-direction: row-reverse;
 }
+@media only screen and (max-width: 325px){
+  .btn{
+        margin: 10px;
+    padding: 12px;
+    font-size: 15px;
+    width: 100%;
+  }
+   
+}
 @media only screen and (max-width: 991px){
   .row p{
     font-size:20px;
   }
    
+}
+
+@media only screen and (max-width: 1024px){
+
 }
 </style>

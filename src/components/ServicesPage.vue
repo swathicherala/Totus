@@ -133,7 +133,7 @@ export default{
 .service{
   background-color: #7a8e8d;
   text-align: left;
-  padding:80px;
+  padding:40px;
   margin-bottom:40px;
  
 }
@@ -256,6 +256,21 @@ export default{
     right: 0px;
     top:0px;
 }
+@media only screen and (max-width: 425px) {
+  
+  .btn{
+        margin: 0px;
+    padding: 12px;
+    font-size: 15px;
+    width: 100%;
+   }
+   .bd h1{
+        margin-top: 40px;
+   }
+   
+
+}
+
 @media only screen and (max-width: 572px) {
     /* html {
         font-size: 80%;

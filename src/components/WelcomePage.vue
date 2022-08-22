@@ -323,7 +323,7 @@ export default {
 .intro img {
   width: 100%;
 }
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 425px) {
    .info{
     margin-top:30px;
    }
@@ -369,7 +369,7 @@ export default {
 
 }
 
-@media only screen and (max-width: 572px) {
+@media only screen and (max-width: 1024px) {
     /* html {
         font-size: 80%;
     } */
