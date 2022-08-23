@@ -3,7 +3,7 @@
     <div id="font-imp">
       <nav class="navbar navbar-expand-lg navigation" id="navbar" style="padding:0">
         <div class="container" style="padding:0">
-          <div class="myclass" style="background-color:grey">
+          <div class="myclass" id="navcolor" v-show="myStyle">
             <!-- ACE Logo start -->
             <a href="#top" class="navbar-brand linkss" to="/">
               <img
@@ -115,14 +115,16 @@ mounted(){
 },
 methods:{
    changeBag(){
-    var navbar=document.getElementById('navbar')
+    // var navbar=document.getElementById('navcolor')
     var scrollvalue=window.scrollY
     this.scrollValue=scrollvalue
     console.log(scrollvalue)
     if(scrollvalue < 150){
-      navbar.classList.remove('bgcolor')
+      // navbar.classList.add('bgcolor')
+      this.myStyle=true
     }else{
-      navbar.classList.add('bgcolor')
+      // navbar.classList.remove('bgcolor')
+      this.myStyle=false
     }
   }
 
@@ -175,6 +177,9 @@ body {
   width: 100%;
   z-index: 9999;
   transition: transform 0.2s;
+}
+#navcolor{
+  /* background: rgba(72 122 180 / .5); */
 }
 .childhead #child {
   display: block;

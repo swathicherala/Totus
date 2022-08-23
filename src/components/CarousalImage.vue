@@ -5,7 +5,7 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active imageslider">        
@@ -46,17 +46,22 @@
 .para{ 
   position: absolute;
   text-align: center;
-  top: 39%;
+  top: 29%;
   width: 100%;
   font-size:80px;
   font-weight: bold;
-  color:white;
+  color:rgb(7, 7, 7);
+  /* padding: 0px 200px;
+    background: rgba(0,0,0,0.7); */
 }
 .carousel {
     /* position: absolute; */
     top: 0;
     width:100%;
   
+}
+.carousel .imageslider img{
+  opacity: 0.8;
 }
 /* .carousel img{
   height:20%;
