@@ -106,7 +106,8 @@ export default {
       scrollValue:'',
        myStyle:{
             backgroundColor:"#16a085" 
-            }
+            },
+            // colorchange:''
     }
   },
 mounted(){
@@ -141,6 +142,9 @@ methods:{
   text-align: center;
   color: #2c3e50;
 }
+.myclass .colorChange{
+  background: green;
+}
 body {
   height:300vh;
   background:    
@@ -161,7 +165,9 @@ body {
 .navbarbtn{
   background: white;
 }
-
+.navbar-brand{
+      padding-left: 34px;
+}
 .childhead {
   display: none;
   background-color: white;
@@ -201,7 +207,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  background: transparent;
+  background: grey;
   z-index: 100;
   position: fixed;
    padding-top: 72px;
